@@ -1,9 +1,21 @@
 package lambda;
 
-public class Usuario {
+class CarrinhoDeCompra{
+}
+class Produto{
+}
+class Endereco{
+}
+
+@Author(name="Felippe") // metadado
+public class Usuario implements Comparable<Usuario> {
+	
+	class Autenticar{}
 	
 	private static Integer nextId = 1;
 	private Integer id;
+	
+	@Validation(min=5)
 	private String nome;
 	private Integer pontos;
 	private boolean moderador;
@@ -14,6 +26,11 @@ public class Usuario {
 		this.pontos = pontos;
 		this.moderador = false;
 	}
+	@Override
+	public int compareTo(Usuario outro) {
+		return this.nome.compareTo(outro.getNome());
+	}
+	
 	@Override
 	public String toString() {
 		return "Usuario: "+id+" | " + nome + " | " + pontos;
@@ -43,4 +60,5 @@ public class Usuario {
 	public void setModerador(boolean moderador) {
 		this.moderador = moderador;
 	}
+	
 }
