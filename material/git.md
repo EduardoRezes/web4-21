@@ -1,49 +1,49 @@
-
 # Criar repositório
-```
 
+```
 git init
 
 git add -A
 
 git commit -m "alguma mensagem"
 
-// so faz na primeira vez
+# so faz na primeira vez
 git remote add origin https://github.com/nome/projeto
 
-// sobe as mudanças locais para o github.
+# sobe as mudanças locais para o github.
 git push origin master
 
 ```
 
 # Manutenção (sincronizar mudanças locais)
+```
 git add -A
 git commit -m ""
 git push origin master
-
+```
 
 
 # Clonar
 
-// faz a copia do projeto para a maquina
-
+Faz a copia do projeto para a maquina
+```
 `git clone https://github.com/fscheidt/web4-21`
 
-Atualiza
+# Atualiza
 
 git pull origin master
 
 cd /web4-21/cineclube
+```
 
 
-########################
-Como importar no spring tools??
+# Como importar no spring tools??
 
-
+```
 File > Import > Existing maven project
 Seleciona o diretorio do projeto
 Finish
-
+```
 
 
 
