@@ -1,0 +1,21 @@
+<html>
+<body>
+<head>
+	<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+
+<h2>Index</h2>
+
+<span th:text="${today}"></span>
+
+<form action="/imc">
+	<input name="peso" placeholder='digite seu peso'/>
+	<input name="altura" placeholder='digite altura'/>
+	<input type="submit" value="calcular">
+</form>
+
+<span th:text="${mensagem}"></span>
+
+</body>
+</html>
+
