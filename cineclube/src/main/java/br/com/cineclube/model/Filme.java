@@ -1,5 +1,8 @@
 package br.com.cineclube.model;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,42 +13,53 @@ public class Filme {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
-	private Integer ano;
-	private String categoria;
-	private Float nota;
-	private String nome;
+	private Long id;
+	private LocalDate release;
+	private Category category;
+	private BigDecimal score;
+	private String title;
 	
-	public Integer getId() {
+	public Filme() {}
+	
+	public Filme(String title, LocalDate release, Category cat,
+			BigDecimal score) {
+		this.title = title;
+		this.release = release;
+		this.category = cat;
+		this.score = score;
+	}
+	
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-	public Integer getAno() {
-		return ano;
+	public LocalDate getRelease() {
+		return release;
 	}
-	public void setAno(Integer ano) {
-		this.ano = ano;
+	public void setRelease(LocalDate release) {
+		this.release = release;
 	}
-	public String getCategoria() {
-		return categoria;
+	public Category getCategory() {
+		return category;
 	}
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
-	public Float getNota() {
-		return nota;
+	public BigDecimal getScore() {
+		return score;
 	}
-	public void setNota(Float nota) {
-		this.nota = nota;
+	public void setScore(BigDecimal score) {
+		this.score = score;
 	}
-	public String getNome() {
-		return nome;
+	public String getTitle() {
+		return title;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
-
+	
 }
