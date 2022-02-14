@@ -38,9 +38,6 @@ public class FilmeController {
 	
 	@RequestMapping("/new") // cadastro do filme
 	public String newForm(Model model) {
-		
-		
-		
 		return "filmes/manter.html";
 	}
 	@RequestMapping("/delete/{id}") // remove o filme
@@ -49,7 +46,6 @@ public class FilmeController {
 //		dao.deleteById(null)
 		return "redirect: /filmes/list";
 	}
-	
 	@RequestMapping("/list")
 	public String list(Model model) {
 		List<Filme> filmeList = dao.findAll();
@@ -57,13 +53,4 @@ public class FilmeController {
 		return "filmes/list.html";
 	}
 
-	@RequestMapping("/home")
-	public String home(Model model) {
-		
-		Calendar cal = Calendar.getInstance();
-		// model - permite passar uma variavel para a View (html)
-		model.addAttribute("today", cal.getTime());
-		
-		return "index.html";
-	}
 }

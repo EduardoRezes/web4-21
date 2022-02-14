@@ -1,21 +1,20 @@
-<html>
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="head:: head"/>
 <body>
-<head>
-	<link th:href="@{/main.css}" rel="stylesheet" />
-</head>
-
-<h2>Index</h2>
-
-<span th:text="${today}"></span>
-
-<form action="/imc">
-	<input name="peso" placeholder='digite seu peso'/>
-	<input name="altura" placeholder='digite altura'/>
-	<input type="submit" value="calcular">
-</form>
-
-<span th:text="${mensagem}"></span>
-
+  <div th:replace="menu:: menu"/>
+  <main class="container">
+    <div class="bg-light p-5 rounded">
+    <!-- colocar os componentes -->
+          
+      <div class="row">
+      	<a th:href="@{/filmes/list}">Listar filmes</a>
+      	
+      	<!-- colocar os componentes -->
+      </div>
+      
+    </div>
+  </main>
+  <script type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>
-
